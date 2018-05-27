@@ -1,0 +1,1 @@
+ALTER TABLE reminders add COLUMN repeat boolean;

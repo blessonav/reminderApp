@@ -1,0 +1,159 @@
+2018-05-28 03:00:03,766 +0530 [main] DEBUG (DbHelper.java:67) - Loading properties
+2018-05-28 03:00:03,804 +0530 [main] DEBUG (DbHelper.java:78) - Creating the data source
+2018-05-28 03:00:03,847 +0530 [main] DEBUG (DbHelper.java:85) - Executing Flyway (database migration)
+2018-05-28 03:00:05,641 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Jdbc Url: jdbc:h2:data/db
+2018-05-28 03:00:05,657 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Database: H2 1.3
+2018-05-28 03:00:05,663 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - DDL Transactions Supported: false
+2018-05-28 03:00:05,674 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Schema: PUBLIC
+2018-05-28 03:00:05,690 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Schema "PUBLIC" already exists. Skipping schema creation.
+2018-05-28 03:00:05,706 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Jdbc Url: jdbc:h2:data/db
+2018-05-28 03:00:05,707 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Database: H2 1.3
+2018-05-28 03:00:05,713 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Creating Metadata table: "PUBLIC"."schema_version"
+2018-05-28 03:00:05,737 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 17: CREATE TABLE "PUBLIC"."schema_version" (
+    "version_rank" INT NOT NULL,
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50) NOT NULL,
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL
+)
+2018-05-28 03:00:05,739 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 30: ALTER TABLE "PUBLIC"."schema_version" ADD CONSTRAINT "schema_version_pk" PRIMARY KEY ("version")
+2018-05-28 03:00:05,740 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 32: CREATE INDEX "PUBLIC"."schema_version_vr_idx" ON "PUBLIC"."schema_version" ("version_rank")
+2018-05-28 03:00:05,741 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 33: CREATE INDEX "PUBLIC"."schema_version_ir_idx" ON "PUBLIC"."schema_version" ("installed_rank")
+2018-05-28 03:00:05,742 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 34: CREATE INDEX "PUBLIC"."schema_version_s_idx" ON "PUBLIC"."schema_version" ("success")
+2018-05-28 03:00:05,745 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: CREATE TABLE "PUBLIC"."schema_version" (
+    "version_rank" INT NOT NULL,
+    "installed_rank" INT NOT NULL,
+    "version" VARCHAR(50) NOT NULL,
+    "description" VARCHAR(200) NOT NULL,
+    "type" VARCHAR(20) NOT NULL,
+    "script" VARCHAR(1000) NOT NULL,
+    "checksum" INT,
+    "installed_by" VARCHAR(100) NOT NULL,
+    "installed_on" TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "execution_time" INT NOT NULL,
+    "success" BOOLEAN NOT NULL
+)
+2018-05-28 03:00:05,751 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: ALTER TABLE "PUBLIC"."schema_version" ADD CONSTRAINT "schema_version_pk" PRIMARY KEY ("version")
+2018-05-28 03:00:05,752 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: CREATE INDEX "PUBLIC"."schema_version_vr_idx" ON "PUBLIC"."schema_version" ("version_rank")
+2018-05-28 03:00:05,759 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: CREATE INDEX "PUBLIC"."schema_version_ir_idx" ON "PUBLIC"."schema_version" ("installed_rank")
+2018-05-28 03:00:05,760 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: CREATE INDEX "PUBLIC"."schema_version_s_idx" ON "PUBLIC"."schema_version" ("success")
+2018-05-28 03:00:05,761 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Metadata table "PUBLIC"."schema_version" created.
+2018-05-28 03:00:05,762 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Locking table "PUBLIC"."schema_version"...
+2018-05-28 03:00:05,763 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Lock acquired for table "PUBLIC"."schema_version"
+2018-05-28 03:00:05,768 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Spring Jdbc available: false
+2018-05-28 03:00:05,771 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning for classpath resources at 'db/migration' (Prefix: 'V', Suffix: '.sql')
+2018-05-28 03:00:05,772 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning URL: jar:file:/D:/eclipse-workspace/remainder-java-db-swing-app/target/ReminderApp.jar!/db/migration
+2018-05-28 03:00:05,773 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - JBoss VFS v2 available: false
+2018-05-28 03:00:05,793 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/ (filename: )
+2018-05-28 03:00:05,794 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found resource: db/migration/V1__inital_db.sql
+2018-05-28 03:00:05,795 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found resource: db/migration/V2__update_table.sql
+2018-05-28 03:00:05,796 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found resource: db/migration/V3__update_table2.sql
+2018-05-28 03:00:05,803 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning for classes at 'db/migration' (Implementing: 'com.googlecode.flyway.core.api.migration.jdbc.JdbcMigration')
+2018-05-28 03:00:05,804 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning URL: jar:file:/D:/eclipse-workspace/remainder-java-db-swing-app/target/ReminderApp.jar!/db/migration
+2018-05-28 03:00:05,810 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/ (filename: )
+2018-05-28 03:00:05,810 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/V1__inital_db.sql (filename: V1__inital_db.sql)
+2018-05-28 03:00:05,811 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/V2__update_table.sql (filename: V2__update_table.sql)
+2018-05-28 03:00:05,812 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/V3__update_table2.sql (filename: V3__update_table2.sql)
+2018-05-28 03:00:05,820 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - No upgrade to the Flyway 2.0 format necessary for metadata table "PUBLIC"."schema_version"
+2018-05-28 03:00:05,829 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - No metadata table upgrade to the Flyway 2.0.2 format necessary
+2018-05-28 03:00:05,833 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - No metadata table upgrade to the Flyway 2.1 format necessary
+2018-05-28 03:00:05,838 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Current version of schema "PUBLIC": << Empty Schema >>
+2018-05-28 03:00:05,839 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Migrating schema "PUBLIC" to version 1
+2018-05-28 03:00:05,842 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 1: CREATE TABLE reminders(
+id bigint auto_increment NOT NULL,
+name varchar(128) NOT NULL,
+dateselected DATE,
+timeselected TIME,
+PRIMARY KEY(id)
+)
+2018-05-28 03:00:05,843 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: CREATE TABLE reminders(
+id bigint auto_increment NOT NULL,
+name varchar(128) NOT NULL,
+dateselected DATE,
+timeselected TIME,
+PRIMARY KEY(id)
+)
+2018-05-28 03:00:05,848 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Successfully completed and committed migration of schema "PUBLIC" to version 1
+2018-05-28 03:00:05,876 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - MetaData table "PUBLIC"."schema_version" successfully updated to reflect changes
+2018-05-28 03:00:05,879 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Locking table "PUBLIC"."schema_version"...
+2018-05-28 03:00:05,880 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Lock acquired for table "PUBLIC"."schema_version"
+2018-05-28 03:00:05,886 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Migrating schema "PUBLIC" to version 2
+2018-05-28 03:00:05,888 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 1: ALTER TABLE reminders add COLUMN datepresent boolean
+2018-05-28 03:00:05,888 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: ALTER TABLE reminders add COLUMN datepresent boolean
+2018-05-28 03:00:05,903 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Successfully completed and committed migration of schema "PUBLIC" to version 2
+2018-05-28 03:00:05,908 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - MetaData table "PUBLIC"."schema_version" successfully updated to reflect changes
+2018-05-28 03:00:05,911 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Locking table "PUBLIC"."schema_version"...
+2018-05-28 03:00:05,912 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Lock acquired for table "PUBLIC"."schema_version"
+2018-05-28 03:00:05,920 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Migrating schema "PUBLIC" to version 3
+2018-05-28 03:00:05,922 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found statement at line 1: ALTER TABLE reminders add COLUMN repeat boolean
+2018-05-28 03:00:05,922 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Executing SQL: ALTER TABLE reminders add COLUMN repeat boolean
+2018-05-28 03:00:05,931 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Successfully completed and committed migration of schema "PUBLIC" to version 3
+2018-05-28 03:00:05,935 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - MetaData table "PUBLIC"."schema_version" successfully updated to reflect changes
+2018-05-28 03:00:05,937 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Locking table "PUBLIC"."schema_version"...
+2018-05-28 03:00:05,939 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Lock acquired for table "PUBLIC"."schema_version"
+2018-05-28 03:00:05,959 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Successfully applied 3 migrations to schema "PUBLIC" (execution time 00:00.234s).
+2018-05-28 03:00:06,309 +0530 [AWT-EventQueue-0] DEBUG (Main.java:26) - Starting application
+2018-05-28 03:00:07,483 +0530 [SwingWorker-pool-1-thread-1] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:00:07,487 +0530 [SwingWorker-pool-1-thread-1] DEBUG (RemindersHelper.java:71) - Loaded 0 reminders
+2018-05-28 03:00:18,083 +0530 [SwingWorker-pool-1-thread-2] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:00:18,085 +0530 [SwingWorker-pool-1-thread-2] DEBUG (RemindersHelper.java:71) - Loaded 0 reminders
+2018-05-28 03:00:36,887 +0530 [SwingWorker-pool-1-thread-3] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:00:36,888 +0530 [SwingWorker-pool-1-thread-3] DEBUG (RemindersHelper.java:71) - Loaded 0 reminders
+2018-05-28 03:00:59,758 +0530 [AWT-EventQueue-0] DEBUG (Reminder.java:194) - Adding new reminder: [No Id] Enter the title - 03:05:00
+2018-05-28 03:00:59,765 +0530 [SwingWorker-pool-1-thread-4] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:00:59,767 +0530 [SwingWorker-pool-1-thread-4] DEBUG (RemindersHelper.java:71) - Loaded 1 reminders
+2018-05-28 03:01:18,473 +0530 [SwingWorker-pool-1-thread-5] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:01:18,475 +0530 [SwingWorker-pool-1-thread-5] DEBUG (RemindersHelper.java:71) - Loaded 1 reminders
+2018-05-28 03:01:23,018 +0530 [AWT-EventQueue-0] DEBUG (Reminder.java:194) - Adding new reminder: [No Id] Enter the title - 68:58:37
+2018-05-28 03:01:23,022 +0530 [SwingWorker-pool-1-thread-6] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:01:23,023 +0530 [SwingWorker-pool-1-thread-6] DEBUG (RemindersHelper.java:71) - Loaded 2 reminders
+2018-05-28 03:02:28,002 +0530 [AWT-EventQueue-0] DEBUG (Reminder.java:194) - Adding new reminder: [No Id] Enter the title - 20:57:31
+2018-05-28 03:02:28,005 +0530 [SwingWorker-pool-1-thread-7] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:02:28,007 +0530 [SwingWorker-pool-1-thread-7] DEBUG (RemindersHelper.java:71) - Loaded 3 reminders
+2018-05-28 03:02:40,863 +0530 [AWT-EventQueue-0] DEBUG (Reminder.java:152) - Deleting reminder: [2] Enter the title - 68:57:19
+2018-05-28 03:02:40,868 +0530 [SwingWorker-pool-1-thread-8] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:02:40,870 +0530 [SwingWorker-pool-1-thread-8] DEBUG (RemindersHelper.java:71) - Loaded 2 reminders
+2018-05-28 03:02:44,434 +0530 [SwingWorker-pool-1-thread-9] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:02:44,436 +0530 [SwingWorker-pool-1-thread-9] DEBUG (RemindersHelper.java:71) - Loaded 2 reminders
+2018-05-28 03:02:50,032 +0530 [Thread-2] DEBUG (DbHelper.java:38) - Closing the data source
+2018-05-28 03:02:53,363 +0530 [main] DEBUG (DbHelper.java:67) - Loading properties
+2018-05-28 03:02:53,368 +0530 [main] DEBUG (DbHelper.java:78) - Creating the data source
+2018-05-28 03:02:53,383 +0530 [main] DEBUG (DbHelper.java:85) - Executing Flyway (database migration)
+2018-05-28 03:02:54,675 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Jdbc Url: jdbc:h2:data/db
+2018-05-28 03:02:54,679 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Database: H2 1.3
+2018-05-28 03:02:54,683 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - DDL Transactions Supported: false
+2018-05-28 03:02:54,693 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Schema: PUBLIC
+2018-05-28 03:02:54,706 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Schema "PUBLIC" already exists. Skipping schema creation.
+2018-05-28 03:02:54,718 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - No upgrade to the Flyway 2.0 format necessary for metadata table "PUBLIC"."schema_version"
+2018-05-28 03:02:54,727 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - No metadata table upgrade to the Flyway 2.0.2 format necessary
+2018-05-28 03:02:54,732 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - No metadata table upgrade to the Flyway 2.1 format necessary
+2018-05-28 03:02:54,743 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Jdbc Url: jdbc:h2:data/db
+2018-05-28 03:02:54,744 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Database: H2 1.3
+2018-05-28 03:02:54,751 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Locking table "PUBLIC"."schema_version"...
+2018-05-28 03:02:54,752 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Lock acquired for table "PUBLIC"."schema_version"
+2018-05-28 03:02:54,757 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Spring Jdbc available: false
+2018-05-28 03:02:54,762 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning for classpath resources at 'db/migration' (Prefix: 'V', Suffix: '.sql')
+2018-05-28 03:02:54,764 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning URL: jar:file:/D:/eclipse-workspace/remainder-java-db-swing-app/target/ReminderApp.jar!/db/migration
+2018-05-28 03:02:54,765 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - JBoss VFS v2 available: false
+2018-05-28 03:02:54,791 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/ (filename: )
+2018-05-28 03:02:54,793 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found resource: db/migration/V1__inital_db.sql
+2018-05-28 03:02:54,794 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found resource: db/migration/V2__update_table.sql
+2018-05-28 03:02:54,795 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Found resource: db/migration/V3__update_table2.sql
+2018-05-28 03:02:54,802 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning for classes at 'db/migration' (Implementing: 'com.googlecode.flyway.core.api.migration.jdbc.JdbcMigration')
+2018-05-28 03:02:54,803 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Scanning URL: jar:file:/D:/eclipse-workspace/remainder-java-db-swing-app/target/ReminderApp.jar!/db/migration
+2018-05-28 03:02:54,810 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/ (filename: )
+2018-05-28 03:02:54,811 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/V1__inital_db.sql (filename: V1__inital_db.sql)
+2018-05-28 03:02:54,811 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/V2__update_table.sql (filename: V2__update_table.sql)
+2018-05-28 03:02:54,812 +0530 [main] DEBUG (ApacheCommonsLog.java:39) - Filtering out resource: db/migration/V3__update_table2.sql (filename: V3__update_table2.sql)
+2018-05-28 03:02:54,824 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Current version of schema "PUBLIC": 3
+2018-05-28 03:02:54,825 +0530 [main] INFO  (ApacheCommonsLog.java:43) - Schema "PUBLIC" is up to date. No migration necessary.
+2018-05-28 03:02:54,960 +0530 [AWT-EventQueue-0] DEBUG (Main.java:26) - Starting application
+2018-05-28 03:02:55,353 +0530 [SwingWorker-pool-1-thread-1] DEBUG (RemindersHelper.java:27) - Loading reminders
+2018-05-28 03:02:55,358 +0530 [SwingWorker-pool-1-thread-1] DEBUG (RemindersHelper.java:71) - Loaded 2 reminders
+2018-05-28 03:02:59,692 +0530 [Thread-2] DEBUG (DbHelper.java:38) - Closing the data source
